@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(179, 179, 253);
+
+    font-size: 16px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro{
+    align-items: center;
+    background-color:rgb(155, 153, 153);
+
+    width: 30em;
+    border-radius: 2em;
+    padding: 0.4em;
+}
+
+.rest{
+    align-items: center;
+}
