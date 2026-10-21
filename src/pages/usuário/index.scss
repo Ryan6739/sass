@@ -15,16 +15,17 @@ h1{
     display: flex;
     justify-content: center;
 }
-input{
-    border-radius: 1em;
-}
+
 
 button{
-    background-color: rgb(163, 193, 246);
-    border-radius: 1em;
+    display: flex;
+    align-items: center;
 
-    width: 12em;
-    padding: 1.4em;
+    background-color: rgb(163, 193, 246);
+
+    border-radius: 1em;
+    
+
 }
 button:hover{
     background-color: rgb(106, 106, 253);

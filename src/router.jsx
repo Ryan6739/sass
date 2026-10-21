@@ -1,11 +1,14 @@
 import './index.scss';
+
 import App from './pages/app/App.jsx';
-import Contato from './pages/contato/index.jsx';
-import Eventos from './pages/eventos/index.jsx';
-import Burro from './pages/usuário/index.jsx';
-import Contar from './pages/contador/index.jsx';
-import F404 from './pages/notFound/index.jsx';
-import Descricao from './pages/Descricao/index.jsx';
+import Contato from './pages/contato';
+import Eventos from './pages/eventos';
+import Burro from './pages/usuário';
+import Contar from './pages/contador';
+import F404 from './pages/notFound';
+import Descricao from './pages/Descricao';
+import Pagina from './pages/pagina';
+import Conneccao from './pages/Connecao_api/index.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -22,6 +25,8 @@ export default function Router(){
       <Route path ='/cont' element ={<Contar/>}/>
       <Route path ='/F404' element ={<F404/>}/> 
       <Route path ='/descricao' element ={<Descricao/>}/>
+      <Route path ='/pagina' element ={<Pagina/>}/>
+      <Route path ='/conecAPI' element ={<Conneccao/>}/>
 
 
       </Routes>
