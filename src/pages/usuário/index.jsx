@@ -22,7 +22,7 @@ export default function usuario(){
     }
 
     return(
-        <div>
+        <div className='cc'>
 
             <div className="cadastro">
 

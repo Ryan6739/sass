@@ -8,7 +8,8 @@ import Contar from './pages/contador';
 import F404 from './pages/notFound';
 import Descricao from './pages/Descricao';
 import Pagina from './pages/pagina';
-import Conneccao from './pages/Connecao_api/index.jsx'
+import Conneccao from './pages/Connecao_api/index.jsx';
+import Ingressos from './pages/ingressos/index.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -27,6 +28,8 @@ export default function Router(){
       <Route path ='/descricao' element ={<Descricao/>}/>
       <Route path ='/pagina' element ={<Pagina/>}/>
       <Route path ='/conecAPI' element ={<Conneccao/>}/>
+      <Route path ='/ingresso' element = {<Ingressos/>}/>
+      ''
 
 
       </Routes>

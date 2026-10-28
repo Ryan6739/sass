@@ -18,6 +18,7 @@ function App() {
     <Link to='/descricao'>  <h1> P.Descricao </h1>  </Link>
     <Link to='/pagina'>     <h1> P.pagina </h1>     </Link>
     <Link to='/conecAPI'>     <h1> P.1ConecAPI </h1>     </Link>
+    <Link to='/ingresso'>     <h1> P.ingreso </h1>     </Link>
   
   </div>
 
