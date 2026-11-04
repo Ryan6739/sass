@@ -1,6 +1,6 @@
 import './index.scss';
 import { useState } from 'react';
-import Cabecalho from '../../componentes/cabecalho';
+
 
 
 const preco_ing = 30;
@@ -12,6 +12,7 @@ export default function Ingressos (){
     const [meiaent, setmeiaent] = useState();
     const[cupom, setcupom] = useState("");
     const [total, settotal] = useState('');
+    
 
     function riy (){
 

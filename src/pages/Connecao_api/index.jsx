@@ -2,6 +2,7 @@ import './index.scss';
 import { useState } from 'react';
 import axios from 'axios';
 import Cabecalho from '../../componentes/cabecalho/index.jsx';
+import Rodape from '../../componentes/rodape/index.jsx';
 
 
 export default function Conneccao(){
@@ -35,6 +36,8 @@ export default function Conneccao(){
             <p> {endereco} </p>
 
         </div>
+
+            <Rodape/>
 
         </div>
     );
