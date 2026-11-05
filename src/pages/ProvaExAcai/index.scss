@@ -1,11 +1,16 @@
 .td_provinha{
+        background-color: rgb(66, 0, 128);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1em;
     
-
-    .mm, .mm1, .buda, .xx, .ggu{
+    .quantidade{
         display: flex;
-        justify-content: center;
-
-        padding: 1em;
+        flex-direction: column;
+        align-items: center;
     }
     
 }

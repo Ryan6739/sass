@@ -20,6 +20,8 @@ export default function Ingressos (){
         if(meiaent===true){
             valor = valor /2;
         }
+
+        
         if (cupom ==="quero50"){
             valor = valor * 0.5;
         }

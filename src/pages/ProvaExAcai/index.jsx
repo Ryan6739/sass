@@ -1,113 +1,105 @@
 import './index.scss';
 import { useState } from 'react';
 
+export default function ProvaExAcai() {
+
+    const [peq, setpeq] = useState(0);
+    const [med, setmed] = useState(0);
+    const [gran, setgran] = useState(0);
+
+    const [quant, setquant] = useState(1);
+    const [meia, setmeia] = useState();
+    const [cup, setcup] = useState("");
+    const [total, settotal] = useState('');
 
 
-const preco_peq = 10;
-const preco_med = 15;
-const preco_grd = 20;
-
-export default function ProvaExAcai (){
-
-    const [quantidade, setquantidade]= useState(1);
-    const [tamanho, settamanho] = useState(false);
-    const [cupom, setcupom] = useState('');
-    const [total, settotal] = useState(''); 
-
-    function vv(){
+    function calcular() {
 
         let valor = 0;
-        
-        if(tamanho==="pequeno"){
-            valor = quantidade * preco_peq;
-            
-        } else if(tamanho==="medio"){
-            valor = quantidade * preco_med;
 
-        } else if(tamanho==="grande"){
-            valor = quantidade * preco_grd;
-        };
-        
-        if(cupom==="ACAI10"){
-            valor = valor * 0.9;
-        };
+        if(peq === 10 ){
+            valor = quant * peq;
+        }
+        else if( med === 15){
+            valor = quant * med;
+        }
+        else if( gran === 20){
+            valor = quant * gran;
+        }
 
+
+        if(cup === "Cp50"){
+            valor = valor * 0.5;
+        }
+
+
+
+        if(meia === true){
+            valor = valor / 2;
+        }
 
         settotal(valor);
     }
-    
 
 
 
-    
-        return(
-        <div className='td_provinha'>
 
-            
-
-            <div className='mm'>
-                
-
-                <h1>Venda de Acai!!!!!!!!</h1>
+    return (
+        <div className="prova-ex-acai">
 
 
-            </div>
-                
-                <div className='mm1'> 
-                    <label>Quantidade:</label>
-                    <input 
-                      type="number"   value={quantidade}
-                onChange={(e)=>setquantidade(e.target.value)}   />
+            <h1>Prova Ex Acai</h1>
+
+
+
+            <div className="td_provinha">
+
+
+                <input type="checkbox" value={peq} onChange={(e)=>setpeq(e.target.checked)} />
+                <p> pequeno (R$ 10,00) </p>
+
+
+                <input type="checkbox" value={med} onChange={(e)=>setmed(e.target.checked)} />
+                <p> médio (R$ 15,00) </p>
+
+                <input type="checkbox" value={gran} onChange={(e)=>setgran(e.target.checked)} />
+                <p> grande (R$ 20,00) </p>
+
+
+
+                <div className="quantidade">
+
+                    <label >Quantidade: </label>
+                    <input type="number" min="1" value={quant} onChange={(e)=>setquant(e.target.value)}/>
 
                 </div>
 
-            
-                   <div className='buda'>
-                     
 
-                     <input type="checkbox" name='pequeno' value={"pequeno"}
-                      onClick={(e)=>settamanho(e.target.checked)}/>
-                        <label>pequeno</label>
+                <div className='meia'>
+                    <label>Meia entrada: </label>
+                    <input type="checkbox" checked={meia} onChange={(e)=>setmeia(e.target.checked)} />
+                </div>
+
+                <div className='cupom'>
+                    <label>cupom: </label>
+                    <input type="text" value={cup} onChange={(e)=>setcup(e.target.value)} />
+                </div>
+
+                <div>
+                    <button onClick={calcular}>Calcular</button><br />
+
+                    <p className='total'> O total do valor é R$ {total} </p>
+
+                </div>
 
 
-                    
-
-                     <input type="checkbox" name='medio' value={"medio"}
-                      onClick={(e)=>settamanho(e.target.checked)}/>
-                        <label>medio</label>
-
-                      
-
-                    
-
-                     <input type="checkbox" name='grande' value={"grande"}
-                      onClick={(e)=>settamanho(e.target.checked)}/>
-                        <label>grande </label>
+            </div>
 
 
 
-                   </div>
 
-                   <div className='xx'>
-
-
-                    <label>Cupom: </label>
-                    <input type="text" value={cupom} onChange={(e)=>setcupom(e.target.value)} />
-        
-
-                     </div>
-
-
-
-                          <div className='ggu'>
-
-                            <button onClick={vv}>Calcular Total</button> 
-
-                            <p className='lm'> O total do valor é R$ {total} </p> 
-
-                        </div>
         </div>
 
+        
     );
-
 }
